@@ -1,4 +1,4 @@
-Feature: Open the facebook page
+Feature: Automation testing
 
   Scenario: Open the facebook page
     Given I open the browser

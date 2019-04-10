@@ -11,7 +11,7 @@ class Controller(object):
 
     def open_browser(self, browser):
         if browser == 'firefox':
-            self.driver = webdriver.Firefox(executable_path='/Users/ilionailiadhi/Ora/automation-project/geckodriver')
+            self.driver = webdriver.Firefox(executable_path='{}/geckodriver'.format(os.getcwd()))
         elif browser == 'chrome':
             self.driver = webdriver.Chrome('{}/chromedriver'.format(os.getcwd()))
 
