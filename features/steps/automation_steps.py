@@ -3,14 +3,14 @@ from controller.controller import Controller
 
 
 @step('I open the browser')
-def open_chrome(context):
+def open_browser(context):
     context.controller = Controller(driver=None)
-    context.controller.open_chrome()
+    context.controller.open_browser(context.browser)
 
 
-@step('I type the url "{url}" in the address bar')
-def input_url(context, url):
-    context.controller.input_url(url)
+@step('I type the url in the address bar')
+def input_url(context):
+    context.controller.input_url(context.url)
 
 
 @step('I verify the "{title}" is displayed')
