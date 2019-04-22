@@ -7,3 +7,4 @@ test_results/
 __pycache__/
 classes/__pycache__/
 controllers/__pycache__/
+geckodriver.log
