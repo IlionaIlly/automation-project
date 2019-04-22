@@ -1,0 +1,9 @@
+# Mac stuff
+.DS_Store
+# Pycharm
+.idea/
+# Test results
+test_results/
+__pycache__/
+classes/__pycache__/
+controllers/__pycache__/

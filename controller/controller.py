@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 
 
@@ -8,8 +9,11 @@ class Controller(object):
     def __init__(self, driver):
         self.driver = driver
 
-    def open_chrome(self):
-        self.driver = webdriver.Chrome(executable_path='/Users/ilionailiadhi/Ora/automation-project/chromedriver')
+    def open_browser(self, browser):
+        if browser == 'firefox':
+            self.driver = webdriver.Firefox(executable_path='{}/geckodriver'.format(os.getcwd()))
+        elif browser == 'chrome':
+            self.driver = webdriver.Chrome('{}/chromedriver'.format(os.getcwd()))
 
     def input_url(self, url):
         self.driver.get(url)
